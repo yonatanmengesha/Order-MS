@@ -21,13 +21,20 @@ public class SequenceGenerator {
 	public int generateNextOrderId() {
 		
 		Sequence counter = mongoOperations.findAndModify(
-				
-				query( where("_id").is("sequence")),
-				new Update().inc("sequence",1),
-				options().returnNew(true).upsert(true),
-				Sequence.class);
+                query(where("_id").is("sequence")),
+                new Update().inc("sequence", 1),
+                options().returnNew(true).upsert(true),
+                Sequence.class);
+        return counter.getSequence();
 		
-		return counter.getSequence();
+//		Sequence counter = mongoOperations.findAndModify(
+//				
+//				query( where("_id").is("sequence")),
+//				new Update().inc("sequence",1),
+//				options().returnNew(true).upsert(true),
+//				Sequence.class);
+//		
+//		return counter.getSequence();
 	}
 	
 

@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 public class Order {
 	
 	private Integer orderId;
-	private List<FoodItemDTO> foodItemList;
+	private List<FoodItemDTO> foodItemsList;
 	private Restaurant restaurant;
 	private UserDTO userDTO;
 
