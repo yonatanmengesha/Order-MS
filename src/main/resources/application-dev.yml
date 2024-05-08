@@ -10,7 +10,7 @@ eureka:
 spring:
    data:
     mongodb:
-      uri:  mongodb://localhost:27017/orderdb
+      uri:  mongodb+srv://admin:<password>@atlas-cluster.blupeyp.mongodb.net/ #mongodb://localhost:27017/orderdb
       host: localhost
       port: 27017
       database: orderdb
