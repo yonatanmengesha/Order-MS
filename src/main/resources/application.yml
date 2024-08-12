@@ -1,9 +1,35 @@
+#Yonatan
+
+#server:
+ #   port: 9094
+
+
+
+#spring:
+ #  profiles:
+ #        active: dev
+ #  application:
+    #     name:ORDER-SERVICE
+
+
 server:
     port: 9094
 
+
+eureka:
+  client:
+    service-url:
+        defaultZone: http://localhost:8761/eureka
+ # instance:
+    #   appname: ORDER-SERVICE
+    #   hostname: ORDER-SERVICE
+
 spring:
-   profiles:
-         active: dev
-   application:
-         name:ORDER-SERVICE
-   
+    data:
+     mongodb:
+       uri:  mongodb://localhost:27017/orderdb8
+       host: localhost
+       port: 27017
+       database: orderdb8
+       repositories:
+        enabled: true

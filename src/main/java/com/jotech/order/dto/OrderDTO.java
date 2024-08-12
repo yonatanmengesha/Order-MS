@@ -2,6 +2,8 @@ package com.jotech.order.dto;
 
 import java.util.List;
 
+import org.bson.types.ObjectId;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
